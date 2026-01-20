@@ -8,7 +8,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
 
 body{
   background:#f4f6fb;
@@ -19,85 +24,134 @@ body{
   color:#111;
 }
 
-.page{width:100%;max-width:420px;}
+/* MAIN WRAP (NO CARD LOOK) */
+.page{
+  width:100%;
+  max-width:420px;
+}
 
 /* PROFILE */
-.profile{text-align:center;margin-top:20px;}
-.profile img{
-  width:110px;height:110px;border-radius:50%;
-  border:4px solid #4f8cff;object-fit:cover;
+.profile{
+  text-align:center;
+  margin-top:20px;
 }
-.profile h1{font-size:20px;font-weight:700;margin-top:10px;}
-.profile .fans{font-size:13px;color:#666;margin-top:4px;}
+
+.profile img{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  border:4px solid #4f8cff;
+  object-fit:cover;
+}
+
+.profile h1{
+  font-size:20px;
+  font-weight:700;
+  margin-top:10px;
+}
+
+.profile .fans{
+  font-size:13px;
+  color:#666;
+  margin-top:4px;
+}
 
 /* TAGS */
-.tags{display:flex;justify-content:center;gap:8px;margin-top:10px;}
+.tags{
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  margin-top:10px;
+}
+
 .tag{
-  font-size:11px;padding:4px 10px;border-radius:20px;
-  background:#eaf1ff;color:#356cff;font-weight:600;
+  font-size:11px;
+  padding:4px 10px;
+  border-radius:20px;
+  background:#eaf1ff;
+  color:#356cff;
+  font-weight:600;
 }
 
 /* STATS */
 .stats{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:10px;margin-top:18px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  margin-top:18px;
 }
+
 .stat{
-  background:#fff;border-radius:14px;padding:12px 6px;
-  text-align:center;box-shadow:0 6px 20px rgba(0,0,0,.06);
+  background:#ffffff;
+  border-radius:14px;
+  padding:12px 6px;
+  text-align:center;
+  box-shadow:0 6px 20px rgba(0,0,0,0.06);
 }
-.stat h2{font-size:16px;font-weight:700;}
-.stat p{font-size:11px;color:#777;margin-top:4px;}
+
+.stat h2{
+  font-size:16px;
+  font-weight:700;
+}
+
+.stat p{
+  font-size:11px;
+  color:#777;
+  margin-top:4px;
+}
 
 /* CTA */
 .join-btn{
-  display:flex;align-items:center;justify-content:center;
-  gap:8px;margin-top:22px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  margin-top:22px;
   background:linear-gradient(90deg,#4f8cff,#7b61ff);
-  color:#fff;font-size:16px;font-weight:700;
-  padding:14px;border-radius:14px;text-decoration:none;
+  color:#fff;
+  font-size:16px;
+  font-weight:700;
+  padding:14px;
+  border-radius:14px;
+  text-decoration:none;
 }
 
 /* COUNTDOWN */
 .countdown{
-  background:#fff;border-radius:16px;margin-top:20px;
-  padding:16px;box-shadow:0 6px 20px rgba(0,0,0,.06);
+  background:#ffffff;
+  border-radius:16px;
+  margin-top:20px;
+  padding:16px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.06);
   text-align:center;
 }
-.timer{display:flex;justify-content:space-between;margin-top:12px;}
-.time-box{flex:1;}
-.time-box h3{font-size:18px;font-weight:700;}
-.time-box p{font-size:11px;color:#777;}
 
-/* EXTRA CONTENT (IMAGE STYLE) */
-.extra{
-  background:#fff;border-radius:16px;
-  margin-top:16px;padding:16px;
-  box-shadow:0 6px 20px rgba(0,0,0,.06);
+.timer{
+  display:flex;
+  justify-content:space-between;
+  margin-top:12px;
 }
-.extra h3{
-  font-size:15px;font-weight:700;margin-bottom:10px;
+
+.time-box{
+  flex:1;
 }
-.points{
-  display:flex;flex-direction:column;gap:10px;
+
+.time-box h3{
+  font-size:18px;
+  font-weight:700;
 }
-.point{
-  display:flex;gap:10px;align-items:flex-start;
-}
-.icon{
-  width:26px;height:26px;border-radius:50%;
-  background:#eaf1ff;color:#356cff;
-  display:flex;align-items:center;justify-content:center;
-  font-size:14px;font-weight:700;
-}
-.point p{
-  font-size:13px;color:#555;line-height:1.4;
+
+.time-box p{
+  font-size:11px;
+  color:#777;
 }
 
 /* FOOTER */
 .footer{
-  margin:18px 0;text-align:center;
-  font-size:11px;color:#888;
+  margin:18px 0;
+  text-align:center;
+  font-size:11px;
+  color:#888;
 }
 </style>
 </head>
@@ -109,7 +163,7 @@ body{
   <!-- PROFILE -->
   <div class="profile">
     <img src="https://gamematrix.fun/wp-content/uploads/2025/12/ChatGPT-Image-Dec-20-2025-02_52_40-PM.png">
-    <h1>SatyamDubai Cricket Tennis</h1>
+    <h1>🎾 Tennis SatyamDubai ®</h1>
     <p class="fans">👥 15K+ Fans</p>
 
     <div class="tags">
@@ -142,29 +196,23 @@ body{
   <!-- COUNTDOWN -->
   <div class="countdown">
     <p style="font-weight:600;">Next Match In</p>
-    <div class="timer">
-      <div class="time-box"><h3>01</h3><p>Days</p></div>
-      <div class="time-box"><h3>01</h3><p>Hours</p></div>
-      <div class="time-box"><h3>15</h3><p>Minutes</p></div>
-      <div class="time-box"><h3>16</h3><p>Seconds</p></div>
-    </div>
-  </div>
 
-  <!-- EXTRA CONTENT BELOW TIMER -->
-  <div class="extra">
-    <h3>Why Join SatyamDubai?</h3>
-    <div class="points">
-      <div class="point">
-        <div class="icon">✓</div>
-        <p>High-accuracy tennis & cricket match analysis with proven records.</p>
+    <div class="timer">
+      <div class="time-box">
+        <h3 id="d">01</h3>
+        <p>Days</p>
       </div>
-      <div class="point">
-        <div class="icon">⚡</div>
-        <p>Fast live updates before match start & during key moments.</p>
+      <div class="time-box">
+        <h3 id="h">01</h3>
+        <p>Hours</p>
       </div>
-      <div class="point">
-        <div class="icon">🎯</div>
-        <p>Free expert guidance trusted by thousands of members daily.</p>
+      <div class="time-box">
+        <h3 id="m">15</h3>
+        <p>Minutes</p>
+      </div>
+      <div class="time-box">
+        <h3 id="s">16</h3>
+        <p>Seconds</p>
       </div>
     </div>
   </div>
