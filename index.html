@@ -3,225 +3,117 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tennis SatyamDubai ®</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<title>Landing page</title>
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Inter',sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box;}
 
 body{
-  background:#f4f6fb;
+  font-family:'Poppins',sans-serif;
+  color:#fff;
+  background:#000;
   min-height:100vh;
-  display:flex;
-  justify-content:center;
-  padding:20px 12px;
-  color:#111;
-}
-
-/* MAIN WRAP (NO CARD LOOK) */
-.page{
-  width:100%;
-  max-width:420px;
-}
-
-/* PROFILE */
-.profile{
-  text-align:center;
-  margin-top:20px;
-}
-
-.profile img{
-  width:110px;
-  height:110px;
-  border-radius:50%;
-  border:4px solid #4f8cff;
-  object-fit:cover;
-}
-
-.profile h1{
-  font-size:20px;
-  font-weight:700;
-  margin-top:10px;
-}
-
-.profile .fans{
-  font-size:13px;
-  color:#666;
-  margin-top:4px;
-}
-
-/* TAGS */
-.tags{
-  display:flex;
-  justify-content:center;
-  gap:8px;
-  margin-top:10px;
-}
-
-.tag{
-  font-size:11px;
-  padding:4px 10px;
-  border-radius:20px;
-  background:#eaf1ff;
-  color:#356cff;
-  font-weight:600;
-}
-
-/* STATS */
-.stats{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:10px;
-  margin-top:18px;
-}
-
-.stat{
-  background:#ffffff;
-  border-radius:14px;
-  padding:12px 6px;
-  text-align:center;
-  box-shadow:0 6px 20px rgba(0,0,0,0.06);
-}
-
-.stat h2{
-  font-size:16px;
-  font-weight:700;
-}
-
-.stat p{
-  font-size:11px;
-  color:#777;
-  margin-top:4px;
-}
-
-/* CTA */
-.join-btn{
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:8px;
-  margin-top:22px;
-  background:linear-gradient(90deg,#4f8cff,#7b61ff);
-  color:#fff;
-  font-size:16px;
-  font-weight:700;
-  padding:14px;
-  border-radius:14px;
-  text-decoration:none;
+  padding:20px;
+  position:relative;
 }
 
-/* COUNTDOWN */
-.countdown{
-  background:#ffffff;
+/* BACKGROUND */
+.background{
+  position:fixed;
+  inset:0;
+  background:url('https://nexorax.site/image/download.jpeg') center/cover no-repeat;
+  filter:blur(1px);
+  z-index:-2;
+}
+
+.overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.6);
+  z-index:-1;
+}
+
+/* CARD */
+.container{
+  width:100%;
+  max-width:420px;
+  z-index:2;
+}
+
+.blur-box{
+  background:rgba(255,255,255,.15);
+  backdrop-filter:blur(12px);
   border-radius:16px;
-  margin-top:20px;
-  padding:16px;
-  box-shadow:0 6px 20px rgba(0,0,0,0.06);
+  padding:26px;
   text-align:center;
+  box-shadow:0 8px 30px rgba(0,230,255,.35);
+}
+
+/* TEXT */
+h1{
+  font-size:24px;
+  color:#00e6ff;
+  text-transform:uppercase;
+  margin-bottom:10px;
 }
 
 .timer{
-  display:flex;
-  justify-content:space-between;
+  font-size:22px;
+  font-weight:700;
+  margin:10px 0;
+  color:#ffeb3b;
+}
+
+.profile img{
+  width:150px;
+  border-radius:50%;
+  margin:10px 0;
+  border:3px solid #00e6ff;
+  box-shadow:0 0 18px #00e6ff;
+}
+
+.view-btn{
+  display:inline-block;
+  margin:15px auto;
+  padding:14px 26px;
+  border-radius:40px;
+  font-weight:700;
+  font-size:16px;
+  color:#fff;
+  text-decoration:none;
+  background:linear-gradient(45deg,#32B0ED,#3a7bd5);
+  box-shadow:0 15px 30px rgba(50,176,237,.8);
+}
+
+.footer-text{
+  font-size:13px;
+  opacity:.85;
   margin-top:12px;
 }
 
-.time-box{
-  flex:1;
-}
-
-.time-box h3{
-  font-size:18px;
-  font-weight:700;
-}
-
-.time-box p{
-  font-size:11px;
-  color:#777;
-}
-
-/* FOOTER */
-.footer{
-  margin:18px 0;
+/* POWERED BY */
+.powered-by{
+  margin-top:16px;
+  font-size:12px;
+  color:#00e6ff;
+  font-weight:600;
   text-align:center;
-  font-size:11px;
-  color:#888;
+}
+
+.powered-by a{
+  color:#00ffcc;
+  text-decoration:none;
+}
+.powered-by a:hover{
+  text-decoration:underline;
 }
 </style>
 </head>
-
-<body>
-
-<div class="page">
-
-  <!-- PROFILE -->
-  <div class="profile">
-    <img src="https://gamematrix.fun/wp-content/uploads/2025/12/ChatGPT-Image-Dec-20-2025-02_52_40-PM.png">
-    <h1>🎾 Tennis SatyamDubai ®</h1>
-    <p class="fans">👥 15K+ Fans</p>
-
-    <div class="tags">
-      <div class="tag">Expert Analyst</div>
-      <div class="tag">Live Match Updates</div>
-    </div>
-  </div>
-
-  <!-- STATS -->
-  <div class="stats">
-    <div class="stat">
-      <h2>18,542</h2>
-      <p>Match Analysis</p>
-    </div>
-    <div class="stat">
-      <h2 style="color:#00b36b;">92%</h2>
-      <p>Accuracy</p>
-    </div>
-    <div class="stat">
-      <h2 style="color:#ff9800;">4.8 ★</h2>
-      <p>Fan Rating</p>
-    </div>
-  </div>
-
-  <!-- CTA -->
-  <a href="https://t.me/+Nwr5pBshWocwY2M1" class="join-btn">
-    ✈️ Join Channel
-  </a>
-
-  <!-- COUNTDOWN -->
-  <div class="countdown">
-    <p style="font-weight:600;">Next Match In</p>
-
-    <div class="timer">
-      <div class="time-box">
-        <h3 id="d">01</h3>
-        <p>Days</p>
-      </div>
-      <div class="time-box">
-        <h3 id="h">01</h3>
-        <p>Hours</p>
-      </div>
-      <div class="time-box">
-        <h3 id="m">15</h3>
-        <p>Minutes</p>
-      </div>
-      <div class="time-box">
-        <h3 id="s">16</h3>
-        <p>Seconds</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="footer">
-    Sponsored by Nexgroww Agency
-  </div>
-
-</div>
 
 <!-- META PIXEL -->
 <script>
@@ -229,13 +121,78 @@ body{
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+n.queue=[];
+t=b.createElement(e);t.async=!0;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init', '1702427627210352');
+fbq('init', '882517907856927');
 fbq('track', 'PageView');
+</script>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=882517907856927&ev=PageView&noscript=1"/>
+</noscript>
+
+<body>
+
+<div class="background"></div>
+<div class="overlay"></div>
+
+<div class="container">
+  <div class="blur-box">
+
+    <h1>Trader Gupta™</h1>
+    <p>💰 100% Free Options Trade with Up to 95% Accuracy! 🎯</p>
+
+    <div class="timer">
+      Redirecting in <span id="countdown">3</span> seconds...
+    </div>
+
+    <div class="profile">
+      <img src="https://onebyone.site/wp-content/uploads/2026/01/trrader.jpg">
+    </div>
+
+    <h2>55,453 Subscribers</h2>
+    <p>✅ BankNifty, Nifty, Stock Options Covered 💹</p>
+
+    <a href="https://t.me/+nyFvrbBTfrUyZTll" class="view-btn">
+      JOIN NOW FOR FREE
+    </a>
+
+    <p class="footer-text">
+      💎 Trusted by thousands of traders worldwide! 🌍
+    </p>
+
+    <div class="powered-by">
+      Powered by
+      <a href="https://telegram.me/+TRlJl628l-FkMWE9" target="_blank">
+        Nexgroww Agency
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<!-- ⏳ TIMER + AUTO REDIRECT SCRIPT -->
+<script>
+let timeLeft = 3;
+const countdownEl = document.getElementById("countdown");
+
+const redirectUrl = "https://t.me/+nyFvrbBTfrUyZTll";
+
+const timer = setInterval(() => {
+  timeLeft--;
+  countdownEl.textContent = timeLeft;
+
+  if (timeLeft <= 0) {
+    clearInterval(timer);
+    window.location.href = redirectUrl;
+  }
+}, 1000);
 </script>
 
 </body>
