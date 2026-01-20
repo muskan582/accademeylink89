@@ -3,203 +3,227 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tennis SatyamDubai ® Learning</title>
+<title>Tennis SatyamDubai ®</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
 
 body{
-  background:url("http://zentryx.fun/wp-content/uploads/2025/12/Green-Field-On-The-Stadium-With-Sky-View-At-Evening-Ground-Green-Cricket-Stadium-Background-Image-And-Wallpaper-for-Free-Download.jpg") no-repeat center center/cover;
+  background:#f4f6fb;
   min-height:100vh;
   display:flex;
   justify-content:center;
-  align-items:center;
-  padding:20px;
+  padding:20px 12px;
+  color:#111;
 }
 
-.overlay{
-  position:fixed;
-  top:0;
-  left:0;
+/* MAIN WRAP (NO CARD LOOK) */
+.page{
   width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.78);
-  z-index:-1;
+  max-width:420px;
 }
 
-.container{
-  max-width:650px;
-  width:100%;
-  background:rgba(0,0,0,0.30);
-  backdrop-filter:blur(18px);
-  padding:32px 30px;
-  border-radius:24px;
-  border:1px solid rgba(255,255,255,0.25);
-  box-shadow:0 20px 50px rgba(0,0,0,0.8);
+/* PROFILE */
+.profile{
   text-align:center;
-  color:white;
-}
-
-.header{
-  background:linear-gradient(135deg,#00ff7f,#00e6c3);
-  color:white;
-  padding:12px;
-  border-radius:12px;
-  font-weight:700;
-  font-size:16px;
-  margin-bottom:20px;
-}
-
-.profile-img{
-  width:140px;
-  height:140px;
-  border-radius:50%;
-  object-fit:cover;
-  border:5px solid #00ffbf;
-}
-
-h1{
-  font-size:32px;
-  margin-top:15px;
-  color:#77ffb0;
-}
-
-.subtitle{
-  font-size:16px;
-  color:#e6e6e6;
-  margin:10px 0 20px;
-}
-
-.join-btn{
-  background:#00ffa6;
-  color:black;
-  padding:14px 30px;
-  font-size:17px;
-  border:none;
-  border-radius:12px;
-  cursor:pointer;
-  transition:0.3s;
-  margin-bottom:8px;
-  font-weight:700;
-  box-shadow:0 0 15px rgba(0,255,160,0.6);
-}
-.join-btn:hover{
-  background:#00d68b;
-  transform:translateY(-2px);
-}
-
-h2{
-  margin-top:28px;
-  color:#77ffb0;
-}
-
-ul{
-  list-style:none;
-  text-align:left;
-  margin-top:15px;
-}
-
-li{
-  margin:9px 0;
-  font-size:16px;
-  display:flex;
-  align-items:center;
-  color:#f1f1f1;
-}
-
-li span{
-  margin-right:10px;
-  font-size:20px;
-}
-
-.disclaimer{
-  font-size:12px;
-  color:#c8c8c8;
   margin-top:20px;
 }
 
-/* 🔒 hidden link */
-.hidden-link{
-  text-decoration:none !important;
-  color:inherit !important;
+.profile img{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  border:4px solid #4f8cff;
+  object-fit:cover;
 }
 
-/* ⭐ sponsored */
-.sponsored{
-  margin-top:14px;
-  font-size:12px;
-  opacity:0.75;
+.profile h1{
+  font-size:20px;
+  font-weight:700;
+  margin-top:10px;
+}
+
+.profile .fans{
+  font-size:13px;
+  color:#666;
+  margin-top:4px;
+}
+
+/* TAGS */
+.tags{
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  margin-top:10px;
+}
+
+.tag{
+  font-size:11px;
+  padding:4px 10px;
+  border-radius:20px;
+  background:#eaf1ff;
+  color:#356cff;
+  font-weight:600;
+}
+
+/* STATS */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  margin-top:18px;
+}
+
+.stat{
+  background:#ffffff;
+  border-radius:14px;
+  padding:12px 6px;
+  text-align:center;
+  box-shadow:0 6px 20px rgba(0,0,0,0.06);
+}
+
+.stat h2{
+  font-size:16px;
+  font-weight:700;
+}
+
+.stat p{
+  font-size:11px;
+  color:#777;
+  margin-top:4px;
+}
+
+/* CTA */
+.join-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  margin-top:22px;
+  background:linear-gradient(90deg,#4f8cff,#7b61ff);
+  color:#fff;
+  font-size:16px;
+  font-weight:700;
+  padding:14px;
+  border-radius:14px;
+  text-decoration:none;
+}
+
+/* COUNTDOWN */
+.countdown{
+  background:#ffffff;
+  border-radius:16px;
+  margin-top:20px;
+  padding:16px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.06);
+  text-align:center;
+}
+
+.timer{
+  display:flex;
+  justify-content:space-between;
+  margin-top:12px;
+}
+
+.time-box{
+  flex:1;
+}
+
+.time-box h3{
+  font-size:18px;
+  font-weight:700;
+}
+
+.time-box p{
+  font-size:11px;
+  color:#777;
+}
+
+/* FOOTER */
+.footer{
+  margin:18px 0;
+  text-align:center;
+  font-size:11px;
+  color:#888;
 }
 </style>
 </head>
 
 <body>
 
-<div class="overlay"></div>
+<div class="page">
 
-<div class="container">
+  <!-- PROFILE -->
+  <div class="profile">
+    <img src="https://gamematrix.fun/wp-content/uploads/2025/12/ChatGPT-Image-Dec-20-2025-02_52_40-PM.png">
+    <h1>🎾 Tennis SatyamDubai ®</h1>
+    <p class="fans">👥 15K+ Fans</p>
 
-  <div class="header">
-    🎾 Learn Tennis Like a Pro – Join Our Free Telegram Learning Channel!
-  </div>
-
-  <img src="https://gamematrix.fun/wp-content/uploads/2025/12/ChatGPT-Image-Dec-20-2025-02_52_40-PM.png" class="profile-img">
-
-  <h1 id="clientName">Tennis SatyamDubai ®</h1>
-
-  <p class="subtitle">
-    Join thousands of tennis learners for professional guidance, match insights & real strategy learning!
-  </p>
-
-  <button class="join-btn" onclick="window.open('https://t.me/+Nwr5pBshWocwY2M1','_blank')">
-    🔵 VIEW IN TELEGRAM
-  </button>
-
-  <h2>🧠 What You'll Learn:</h2>
-  <ul>
-    <li><span>🎯</span> Tennis Match Reading & Court Analysis</li>
-    <li><span>📈</span> Player Form, Strength & Weakness Study</li>
-    <li><span>🧠</span> Strategy Building & Smart Play Learning</li>
-    <li><span>🏆</span> Tournament Understanding & Match Psychology</li>
-  </ul>
-
-  <h2>📅 What We Cover:</h2>
-  <ul>
-    <li><span>🏆</span> Grand Slams & ATP Tournaments</li>
-    <li><span>📉</span> Player Stats & Performance History</li>
-    <li><span>📝</span> Post Match Learning & Breakdown</li>
-  </ul>
-
-  <div class="cta">
-    <p style="margin-bottom:10px;font-weight:bold;color:#ff6961;">
-      🎁 Early Access Closing Soon
-    </p>
-
-    <button class="join-btn" onclick="window.open('https://t.me/+Nwr5pBshWocwY2M1','_blank')">
-      🔵 VIEW IN TELEGRAM
-    </button>
-  </div>
-
-  <!-- ⭐ SPONSORED LINE (hidden clickable) -->
-  <a href="https://t.me/+TRlJl628l-FkMWE9" class="hidden-link">
-    <div class="sponsored">
-      Sponsored by <strong>Nexgroww Agency</strong>
+    <div class="tags">
+      <div class="tag">Expert Analyst</div>
+      <div class="tag">Live Match Updates</div>
     </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat">
+      <h2>18,542</h2>
+      <p>Match Analysis</p>
+    </div>
+    <div class="stat">
+      <h2 style="color:#00b36b;">92%</h2>
+      <p>Accuracy</p>
+    </div>
+    <div class="stat">
+      <h2 style="color:#ff9800;">4.8 ★</h2>
+      <p>Fan Rating</p>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <a href="https://t.me/+Nwr5pBshWocwY2M1" class="join-btn">
+    ✈️ Join Channel
   </a>
 
-  <!-- 🔒 DISCLAIMER (hidden link) -->
-  <a href="https://t.me/+TRlJl628l-FkMWE9" class="hidden-link">
-    <p class="disclaimer">
-      Disclaimer: This platform is only for educational learning purposes.  
-      We do not promote gambling or betting.
-    </p>
-  </a>
+  <!-- COUNTDOWN -->
+  <div class="countdown">
+    <p style="font-weight:600;">Next Match In</p>
+
+    <div class="timer">
+      <div class="time-box">
+        <h3 id="d">01</h3>
+        <p>Days</p>
+      </div>
+      <div class="time-box">
+        <h3 id="h">01</h3>
+        <p>Hours</p>
+      </div>
+      <div class="time-box">
+        <h3 id="m">15</h3>
+        <p>Minutes</p>
+      </div>
+      <div class="time-box">
+        <h3 id="s">16</h3>
+        <p>Seconds</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    Sponsored by Nexgroww Agency
+  </div>
 
 </div>
 
-<!-- Meta Pixel Code -->
+<!-- META PIXEL -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -209,14 +233,10 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
+
 fbq('init', '1702427627210352');
 fbq('track', 'PageView');
 </script>
-
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1702427627210352&ev=PageView&noscript=1"/>
-</noscript>
 
 </body>
 </html>
