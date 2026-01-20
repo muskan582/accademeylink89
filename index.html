@@ -24,7 +24,7 @@ body{
   color:#111;
 }
 
-/* MAIN WRAP */
+/* MAIN WRAP (NO CARD LOOK) */
 .page{
   width:100%;
   max-width:420px;
@@ -199,19 +199,19 @@ body{
 
     <div class="timer">
       <div class="time-box">
-        <h3 id="days">00</h3>
+        <h3 id="d">01</h3>
         <p>Days</p>
       </div>
       <div class="time-box">
-        <h3 id="hours">00</h3>
+        <h3 id="h">01</h3>
         <p>Hours</p>
       </div>
       <div class="time-box">
-        <h3 id="minutes">00</h3>
+        <h3 id="m">15</h3>
         <p>Minutes</p>
       </div>
       <div class="time-box">
-        <h3 id="seconds">00</h3>
+        <h3 id="s">16</h3>
         <p>Seconds</p>
       </div>
     </div>
@@ -222,33 +222,6 @@ body{
   </div>
 
 </div>
-
-<!-- 🔥 REAL RUNNING TIMER SCRIPT -->
-<script>
-/* SET TARGET DATE/TIME (change this) */
-const targetDate = new Date();
-targetDate.setHours(targetDate.getHours() + 26); // 26 hours from now
-
-function updateTimer() {
-  const now = new Date().getTime();
-  const distance = targetDate - now;
-
-  if (distance < 0) return;
-
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-  document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-  document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-  document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-}
-
-setInterval(updateTimer, 1000);
-updateTimer();
-</script>
 
 <!-- META PIXEL -->
 <script>
